@@ -1,0 +1,17 @@
+name: Unsafe
+on:
+  pull_request_target:
+    types: [opened]
+permissions: {}
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency: x
+    steps:
+      - uses: actions/checkout@0000000000000000000000000000000000000000
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: anthropics/claude-code-action@0000000000000000000000000000000000000000
+        with:
+          claude_args: '--model m --max-turns 100'

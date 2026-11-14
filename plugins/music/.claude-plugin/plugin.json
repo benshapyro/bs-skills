@@ -1,0 +1,9 @@
+{
+  "name": "music",
+  "description": "Songwriting and music production with Suno: from an idea to a ready-to-paste prompt, and refining across generations.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ben Shapiro"
+  },
+  "license": "MIT"
+}

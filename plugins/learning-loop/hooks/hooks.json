@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "/usr/bin/python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/handover_nudge.py\"" }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          { "type": "command", "command": "/usr/bin/python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/compact_keep.py\"" }
+        ]
+      }
+    ]
+  }
+}

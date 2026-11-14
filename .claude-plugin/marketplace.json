@@ -1,0 +1,29 @@
+{
+  "name": "bs-skills",
+  "owner": {
+    "name": "Ben Shapiro"
+  },
+  "description": "Ben Shapiro's Claude skills and plugins.",
+  "plugins": [
+    {
+      "name": "learning-loop",
+      "source": "./plugins/learning-loop",
+      "description": "Helps AI work sessions hand over cleanly and keep project documents in order: handover notes in docs/handovers/, the filing standard with templates, a one-time reminder when you're leaving without a note, and what to keep when a long conversation is shortened."
+    },
+    {
+      "name": "product",
+      "source": "./plugins/product",
+      "description": "Deciding what to build and getting it built well: PRDs, build specs for unattended coding agents, codebase audits for non-technical owners, changelogs, and automatic Claude reviews on GitHub pull requests."
+    },
+    {
+      "name": "writing",
+      "source": "./plugins/writing",
+      "description": "Writing and explaining: tighten any draft without losing meaning, interactive walkthroughs of dense material, an adaptive tutor, and a build log that turns lessons into posts."
+    },
+    {
+      "name": "music",
+      "source": "./plugins/music",
+      "description": "Songwriting and music production with Suno: from an idea to a ready-to-paste prompt, and refining across generations."
+    }
+  ]
+}
