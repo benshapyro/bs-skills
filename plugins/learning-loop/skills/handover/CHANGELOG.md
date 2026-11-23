@@ -2,7 +2,7 @@
 
 ## 1.3 — 2026-11-23
 
-A decision record still waiting for approval is listed among the person's steps in Next, and the example's decision link uses filing's date naming instead of a number. On Ben's request (23 Nov 2026), alongside filing 4.0.
+A decision record still waiting for approval is listed among the person's steps in Next, the example's decision link uses filing's date naming instead of a number, and a lesson worth telling others is also sent to the project's build log. On Ben's request (23 Nov 2026), alongside filing 4.0.
 
 ## 1.2 — 2026-11-11
 

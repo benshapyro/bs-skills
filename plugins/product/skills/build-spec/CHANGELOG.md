@@ -2,6 +2,10 @@
 
 History of changes to this skill, newest first. See the maintenance note in SKILL.md for how to keep this file current.
 
+## v2.1 — 2026-11-23 14:20 PST
+
+The spec's place in a repository is named (`docs/work/<topic>/`, beside its PRD), matching the filing skill. On Ben's request.
+
 ## v2.0 — 2026-11-10 23:55 PST
 
 Rewritten from scratch by an agent that never saw any earlier version, working only from a plain description of what the skill must do. Directed by Ben Shapiro.
