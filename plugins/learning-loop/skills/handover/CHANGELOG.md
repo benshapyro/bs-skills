@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3 — 2026-11-23
+
+A decision record still waiting for approval is listed among the person's steps in Next, and the example's decision link uses filing's date naming instead of a number. On Ben's request (23 Nov 2026), alongside filing 4.0.
+
 ## 1.2 — 2026-11-11
 
 After the second comparison test (results/grading.md: the note cut mistakes in all three tasks but missed the token limit set in advance), the owner accepted the skill and asked for the three weaknesses the test found to be fixed. A note is written only when the person says they are stopping or asks for one; finishing a step or answering how notes are saved is no longer a cue. Notes never copy personal details from the project's data, even into private notes. A sensible call the files support is written as an inferred default, not a question for the person. A new session gets on with work no answer can change while it waits for answers.
