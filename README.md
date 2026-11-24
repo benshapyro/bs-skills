@@ -5,7 +5,7 @@ Claude skills by Ben Shapiro, grouped into four plugins. They work in Claude (th
 | Plugin | Skills | For |
 |---|---|---|
 | `learning-loop` | `handover`, `filing`, plus two reminders | AI work sessions that pick up where the last one stopped, and project documents kept in order |
-| `product` | `prd`, `build-spec`, `codebase-audit`, `changelog`, `ai-pr-review-setup` | Deciding what to build, speccing it for a coding agent, auditing a codebase, keeping change history, and automatic pull request reviews |
+| `product` | `prd`, `build-spec`, `codebase-audit`, `preflight`, `changelog`, `ai-pr-review-setup` | Deciding what to build, speccing it for a coding agent, auditing a codebase, locking a repo down before an agent works in it, keeping change history, and automatic pull request reviews |
 | `writing` | `say-less-but-more`, `walk-me-through`, `learn-anything`, `build-log` | Tightening drafts, interactive explainers, learning a subject properly, and logging lessons worth writing about |
 | `music` | `suno-assistant` | Songwriting prompts for Suno |
 

@@ -13,7 +13,7 @@
     {
       "name": "product",
       "source": "./plugins/product",
-      "description": "Deciding what to build and getting it built well: PRDs, build specs for unattended coding agents, codebase audits for non-technical owners, changelogs, and automatic Claude reviews on GitHub pull requests."
+      "description": "Deciding what to build and getting it built well: PRDs, build specs for unattended coding agents, codebase audits for non-technical owners, a preflight that checks and locks down a repo before an agent works in it, changelogs, and automatic Claude reviews on GitHub pull requests."
     },
     {
       "name": "writing",

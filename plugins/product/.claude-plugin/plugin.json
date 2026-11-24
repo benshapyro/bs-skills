@@ -1,7 +1,7 @@
 {
   "name": "product",
-  "description": "Deciding what to build and getting it built well: PRDs, build specs for unattended coding agents, codebase audits for non-technical owners, changelogs, and automatic Claude reviews on GitHub pull requests.",
-  "version": "0.2.0",
+  "description": "Deciding what to build and getting it built well: PRDs, build specs for unattended coding agents, codebase audits for non-technical owners, a preflight that checks and locks down a repo before an agent works in it, changelogs, and automatic Claude reviews on GitHub pull requests.",
+  "version": "0.3.0",
   "author": {
     "name": "Ben Shapiro"
   },
