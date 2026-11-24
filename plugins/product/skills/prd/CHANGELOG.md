@@ -14,6 +14,10 @@ Decision: make the interview a named step with a rule, instead of rewording the 
 - **In short:** up to six plain lines under the header, with no IDs, so an owner who reads only that can decide. The trial's PRD was the hardest of five write-ups to read.
 - **Stop** joins Go and Hold as a verdict, for when the evidence says not to build.
 
+## v2.1 — 2026-11-23 14:20 PST
+
+Saving now names the folder and top labels the filing skill uses, and says when a decision-log entry also needs a decision record, because the two skills described the same file in different words. On Ben's request.
+
 ## v2.0 — 2026-11-11 01:43 PST
 
 Rewritten from scratch by an agent that never saw any earlier version, working only from a plain description of what the skill must do. Directed by Ben Shapiro.

@@ -57,7 +57,7 @@ Once they've given enough, write all of it, marking your own picks `(assumed: ..
 
 ## Write the spec
 
-Fill in a copy of `references/spec-template.md` in the project; the ready check reads its headings, fields and columns, and its comments say what each part needs. A single-run spec past a few pages is usually a chain.
+Fill in a copy of `references/spec-template.md` in the project (in a repository, `docs/work/<topic>/`, beside its PRD, as the filing skill says); the ready check reads its headings, fields and columns, and its comments say what each part needs. A single-run spec past a few pages is usually a chain.
 
 - **For everyone:** a "done when" command a machine or outsider can run for a plain pass or fail; without it nothing is ready. Thin end-to-end pieces, each with a check a newcomer could judge. Seen failing means working code broken on purpose and the check catching it; red before the code exists doesn't count. Two to four real-world checks, one with a named person doing the real task on their own.
 - **For the agent:** facts as plain rules, not links ("store hours are Pacific time, not UTC"). Each rule names what enforces it; prose alone gets ignored. A rule that holds today gets a test through the whole run on the new path: testing the guard alone misses a path that skips it.

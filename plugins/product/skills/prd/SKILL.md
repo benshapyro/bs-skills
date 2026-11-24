@@ -86,7 +86,9 @@ With every section drafted, follow `references/review.md` (independent reviewers
 
 ## Saving
 
-In a repository, save with the project's documentation; otherwise a shared document if a connector exists, else a markdown file.
+In a repository, save it as `docs/work/<topic>/PRD.md` with the top labels from the filing skill (learning-loop): `status: draft` until the PRD's own Status is Go, then `active`. Otherwise a shared document if a connector exists, else a markdown file.
+
+A decision-log entry that turns out to bind other work, or is hard to undo, also gets a decision record (filing skill); the log entry links to it instead of repeating it.
 
 ## Replies
 

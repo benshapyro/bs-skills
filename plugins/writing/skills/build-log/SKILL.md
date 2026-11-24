@@ -2,7 +2,7 @@
 name: "build-log"
 description: "Keeps a build log of lessons and insights learned while researching, designing, building and testing, in a Claude Doc. Use when asked to log a lesson, start, tidy or harvest a build log, or when a piece of work finishes and something worth telling happened, even if nobody says 'log'."
 metadata:
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Build log
@@ -22,6 +22,8 @@ Capture when:
 - the same fix worked across many cases, so a pattern showed up;
 - a cheap check saved an expensive mistake;
 - the owner points at something and says to log it.
+
+A project's handover notes also record lessons, for fixing how the work is done. This log keeps the ones worth telling. A lesson can be both: capture it here too and link the note as Evidence.
 
 Skip routine changes, what the docs or code already say, private details about other people, and anything secret. Never invent a number, link or date. A lesson with nothing measured yet goes in with Strength "Idea".
 
@@ -115,6 +117,6 @@ One log per project. Don't mix projects in one log unless the owner asks.
 - Name no private people, clients or other users in a row; the log may become public content.
 - Write a few rows per edit, not the whole log at once.
 
-## Maintaining this skill (note v3)
+## Keeping this skill up to date
 
-CHANGELOG.md records this skill's history; don't read it during normal use. After any change, add an entry at its top (what changed, why, date and time, who directed it) and set the header `version` to match. Bump the first number only if a returning user would notice the skill works differently; otherwise bump the second. If CHANGELOG.md is getting long, say so, but don't condense it without asking.
+Each change gets a new entry at the top of CHANGELOG.md saying what changed, why, when and on whose say-so, and the `version` in the header moves to match. The first number goes up only when someone who already knows the skill would see it behave differently; every other change raises the second. Normal use never needs CHANGELOG.md. If that file has grown long, flag it, and shorten it only with permission.

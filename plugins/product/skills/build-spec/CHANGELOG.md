@@ -14,6 +14,10 @@ Decision: add a required spec section instead of leaving it to judgment. Options
 - Two default agent rules in the template: write each piece's check before its code (it must still be seen failing against working code), and on a fix run reproduce the fault and name its cause first.
 - The start command ends by listing every requirement that is not built, and the review compares requirements with the diff. In the trial no build said what it had left out.
 
+## v2.1 — 2026-11-23 14:20 PST
+
+The spec's place in a repository is named (`docs/work/<topic>/`, beside its PRD), matching the filing skill. On Ben's request.
+
 ## v2.0 — 2026-11-10 23:55 PST
 
 Rewritten from scratch by an agent that never saw any earlier version, working only from a plain description of what the skill must do. Directed by Ben Shapiro.

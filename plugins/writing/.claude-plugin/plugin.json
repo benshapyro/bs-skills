@@ -1,7 +1,7 @@
 {
   "name": "writing",
   "description": "Writing and explaining: tighten any draft without losing meaning, interactive walkthroughs of dense material, an adaptive tutor, and a build log that turns lessons into posts.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Ben Shapiro"
   },
