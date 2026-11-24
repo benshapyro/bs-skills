@@ -2,7 +2,7 @@
 name: build-spec
 description: Readies work for a coding agent to build unattended (overnight, a /goal loop, a headless claude -p job) so the run finishes alone and fixes the real problem. Sizes the preparation, limits what the agent may touch, writes a spec whose finish line is a runnable command, and hands over a paste-ready start command. Later says whether a finished run actually fixed the problem. Use for requests like "the agent finished overnight, did it work?", "here's my spec, is it safe to leave running?" or "can Claude build the booking page while I sleep?". Not for deciding whether to build (use the PRD skill), schedules or loops, agent system design, code review, personal goals, decks, or small edits. Never starts the build.
 metadata:
-  version: "2.1"
+  version: "3.0"
 ---
 
 # Build spec
@@ -51,7 +51,7 @@ Record both views and the outcome in the Decision log. Argue as hard as the choi
 
 A legal or safety must is not a judgment call; state it ("texting customers needs their recorded consent"). If the plan needs data nobody records (that consent), or an input many users can't give (a measurement most customers don't know), say so: the feature is blocked until that's solved.
 
-**Close.** Picture the run done with them. What do they check first, and who decides it's right? What has to exist that doesn't yet? Which files, data or services are off limits? For a screen, settle how it behaves and who judges it; a mockup settles looks only, and the agent writes its own code. A repeating job that produces totals gets a check against a figure they already trust.
+**Close.** Picture the run done with them. What do they check first, and who decides it's right? What has to exist that doesn't yet? Which files, data or services are off limits? Which checks, guards or limits work today that this change could route around (a new way in, a new copy of the data)? Find them in the code first, then ask what you missed; each becomes a row under Rules that must still hold. For a screen, settle how it behaves and who judges it; a mockup settles looks only, and the agent writes its own code. A repeating job that produces totals gets a check against a figure they already trust.
 
 Once they've given enough, write all of it, marking your own picks `(assumed: ...)`. Only an unknown that would change what gets built goes under Still open, where it blocks launch.
 
@@ -60,7 +60,7 @@ Once they've given enough, write all of it, marking your own picks `(assumed: ..
 Fill in a copy of `references/spec-template.md` in the project (in a repository, `docs/work/<topic>/`, beside its PRD, as the filing skill says); the ready check reads its headings, fields and columns, and its comments say what each part needs. A single-run spec past a few pages is usually a chain.
 
 - **For everyone:** a "done when" command a machine or outsider can run for a plain pass or fail; without it nothing is ready. Thin end-to-end pieces, each with a check a newcomer could judge. Seen failing means working code broken on purpose and the check catching it; red before the code exists doesn't count. Two to four real-world checks, one with a named person doing the real task on their own.
-- **For the agent:** facts as plain rules, not links ("store hours are Pacific time, not UTC"). Each rule names what enforces it; prose alone gets ignored.
+- **For the agent:** facts as plain rules, not links ("store hours are Pacific time, not UTC"). Each rule names what enforces it; prose alone gets ignored. A rule that holds today gets a test through the whole run on the new path: testing the guard alone misses a path that skips it.
 - **Model behavior** (a prompt, a classifier): success is example inputs with the answers the person expects, written before the build.
 - **Sources** on every requirement, so facts and guesses stay apart. Saying a check catches a case means showing that case, or marking it `(assumed: ...)`.
 
@@ -68,12 +68,13 @@ Fill in a copy of `references/spec-template.md` in the project (in a repository,
 
 1. **Ready check:** `python3 scripts/ready_check.py <spec.md>` (`--light` for a brief). 0 is READY; 1 is GAPS, listed; 2 is ON HOLD, complete but stopped by a Still open item or unproven launch blocker. Fix and rerun. Without Python, run its checks by eye and say so.
 2. **Fresh reader:** give only the spec to a subagent, ideally the model that will build, to mark every spot where it would guess. Fix each.
+3. **Bypass reader** (a full spec or chain that changes existing behavior): a second subagent gets the spec, read access to the code and one question: what works today that this plan could break or route around? Each finding becomes a row under Rules that must still hold or a line under Not in this run.
 
 ## What the person reads
 
 The spec holds the detail; your reply doesn't repeat it. Aim for two minutes of reading: what you wrote and where, the level you picked (theirs to change), each decision needed from them with your recommendation, what to do before launch, the command to paste with its cap as a number, when they'll be needed, and to come back with the log for a review.
 
-Watch for hidden open decisions, checks never seen failing, a stall on a missing key, and every test green while the person still can't do the job.
+Watch for hidden open decisions, checks never seen failing, a stall on a missing key, a requirement quietly left unbuilt, and every test green while the person still can't do the job.
 
 ## Keeping this skill up to date
 

@@ -6,7 +6,11 @@ Read this before writing or restructuring a PRD.
 
 ## Header
 
-Title, then `Status:` Draft, Hold (blockers listed by ID) or Go · `Size:` short or standard · `Updated:` date. Then three scope lines: `Builds:`, `Relies on:` (neighbors it needs but does not specify) and `Excluded:` everything else, permanently. Add "Self-reviewed: no independent reviewer" when that applies.
+Title, then `Status:` Draft, Hold (blockers listed by ID), Go or Stop · `Size:` short or standard · `Updated:` date. Then three scope lines: `Builds:`, `Relies on:` (neighbors it needs but does not specify) and `Excluded:` everything else, permanently. Add "Self-reviewed: no independent reviewer" when that applies.
+
+## In short
+
+Right under the header, up to six plain lines with no IDs: what the owner is asked to decide, your recommendation and the main reason, the worst risk, and this week's test. An owner who reads only this can still make the call.
 
 ## Parts
 

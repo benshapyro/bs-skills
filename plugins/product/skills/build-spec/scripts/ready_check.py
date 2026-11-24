@@ -9,8 +9,8 @@ import re
 import shlex
 import sys
 
-FULL = ["Why this run", "Done when", "Pieces", "Real-world checks", "Baseline", "Facts to use",
-        "Agent rules", "Not in this run", "Launch blockers", "Settings to apply", "Still open",
+FULL = ["Why this run", "Done when", "Pieces", "Real-world checks", "Baseline",
+        "Rules that must still hold", "Facts to use", "Agent rules", "Not in this run", "Launch blockers", "Settings to apply", "Still open",
         "Start command"]
 TABLES = ["Real-world checks", "Agent rules", "Launch blockers"]
 UNFINISHED = [(r"\[\[.*?\]\]", "template slot"), (r"\b(TODO|TBD|FIXME|XXX)\b|\?\?\?", "to-do marker")]
@@ -142,6 +142,14 @@ def check(text, spec_name, light=False):
     if "Real-world checks" in secs and not (field(real, "Person") and field(real, "Task")
                                             and timed(field(real, "Judge on"))):
         gaps.append("Hands-on test needs 'Person:', 'Task:' and 'Judge on:' (now or a date)")
+
+    kept = secs.get("Rules that must still hold", "")
+    if "|" in kept and not table(kept):
+        gaps.append("'## Rules that must still hold' is empty: add a row, or 'None found:' and what you searched")
+    for row in table(kept):
+        if not (row.get("new path it must cover") and row.get("test through the whole run")):
+            gaps.append(f"Rule that must still hold '{row.get('rule today', '')[:50]}' needs a test through the whole run "
+                        "and the new path it covers")
 
     for row in table(secs.get("Agent rules", "")):
         if not row.get("enforced by"):
