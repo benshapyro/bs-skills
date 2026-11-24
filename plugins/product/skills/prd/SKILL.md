@@ -2,7 +2,7 @@
 name: prd
 description: Helps a solo owner decide whether an idea is worth building and pin down exactly what it is, as a short, candid requirements document (PRD) that stays the reference for that piece of work. The core is risk - the owner names what could sink the idea (value, usability, feasibility, viability, harm), picks a response to each, and gets a cheap test this week for the worst - and every claim shows its source. Use when someone wants to write a PRD, has an app idea and wonders if it is worth the effort, pastes meeting notes or a repo and asks what the product should be, needs the requirements updated after plans changed, asks whether their PRD is good enough to hand off, or has a product manager take-home assignment. Not for slicing or scheduling the build, estimates, or preparing a coding agent (build-spec does that from the finished PRD), and not for a small, well-understood change, which is an ordinary task.
 metadata:
-  version: "2.0"
+  version: "2.1"
 ---
 
 # PRD
@@ -74,7 +74,9 @@ With every section drafted, follow `references/review.md` (independent reviewers
 
 ## Saving
 
-In a repository, save with the project's documentation; otherwise a shared document if a connector exists, else a markdown file.
+In a repository, save it as `docs/work/<topic>/PRD.md` with the top labels from the filing skill (learning-loop): `status: draft` until the PRD's own Status is Go, then `active`. Otherwise a shared document if a connector exists, else a markdown file.
+
+A decision-log entry that turns out to bind other work, or is hard to undo, also gets a decision record (filing skill); the log entry links to it instead of repeating it.
 
 ## Replies
 

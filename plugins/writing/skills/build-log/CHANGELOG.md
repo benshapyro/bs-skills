@@ -2,6 +2,10 @@
 
 History of changes to this skill, newest first. See the maintenance note in SKILL.md for how to keep this file current.
 
+## v1.1 — 2026-11-23 14:20 PST
+
+Says how this log differs from the lessons in handover notes (fixes for the process versus stories worth telling), so a lesson isn't lost between them; the maintenance section now uses the standard text the other skills share. On Ben's request.
+
 ## v1.0 — 2026-11-11 11:15 PT
 
 Initial build of a skill that keeps a build log of lessons from any project or conversation, in a Claude Doc, so they can become posts, talks and portfolio pieces later. Directed by Ben Shapiro.

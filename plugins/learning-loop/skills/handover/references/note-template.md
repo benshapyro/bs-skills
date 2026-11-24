@@ -74,7 +74,7 @@ State:
 
 First step: write a failing test for a booking made at 23:30 local time.
 Don't redo: form validation (finished and tested).
-Read first: `src/lib/slots.ts`, `docs/decisions/0003-store-times-in-utc.md`
+Read first: `src/lib/slots.ts`, `docs/decisions/2026-11-12-store-times-in-utc.md`
 Outside the project: the client's real bookings export, `../exports/bookings-nov.csv` (private data, stays out of the repo)
 
 AI next steps:
@@ -86,7 +86,7 @@ Person's next steps (paste in order; the AI does not run these):
 ## Why
 
 - Changed: added validation to the booking form.
-- Decided: store all times in UTC; see `docs/decisions/0003-store-times-in-utc.md`.
+- Decided: store all times in UTC; see `docs/decisions/2026-11-12-store-times-in-utc.md`.
 - Tried and dropped: a date-picker library; it failed the keyboard-access check.
 
 ## What went wrong

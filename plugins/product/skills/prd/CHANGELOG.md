@@ -2,6 +2,10 @@
 
 History of changes to this skill, newest first. See the maintenance note in SKILL.md for how to keep this file current.
 
+## v2.1 — 2026-11-23 14:20 PST
+
+Saving now names the folder and top labels the filing skill uses, and says when a decision-log entry also needs a decision record, because the two skills described the same file in different words. On Ben's request.
+
 ## v2.0 — 2026-11-11 01:43 PST
 
 Rewritten from scratch by an agent that never saw any earlier version, working only from a plain description of what the skill must do. Directed by Ben Shapiro.

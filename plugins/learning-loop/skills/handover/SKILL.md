@@ -2,7 +2,7 @@
 name: handover
 description: Read and write session handover notes in a project's docs/handovers/ folder so the next session, in any AI tool, on any machine or by another person, starts straight away without re-explaining or redoing work. Use at the start of work in a project that has handover notes, or on "pick up where we left off", "what's the state of this", "continue from last time". Use at the end on "write the handover", "handover note", "wrap up", "we're done for today", "I'm stopping here", or when a hook reminds you; offer one if real work happened and the person is leaving. Use mid-session on "remember this for the handover" or when a lesson happens. Not for personal or machine-wide to-dos, meeting notes, changelogs, decision records, or a project's permanent docs.
 metadata:
-  version: "1.2"
+  version: "1.3"
 ---
 
 # Handover
@@ -37,8 +37,8 @@ When the person says "remember this", or something goes wrong or right in a way 
 Follow the template: a short header, then **Next**, **Why**, **What went wrong**, in that order.
 
 - **Next:** mark each claim verified (how), stated (by whom), inferred (why) or unknown. Name the command behind every test result or number so it can be re-run. Give the first step, what not to redo and what to read first. Split next steps into yours and the person's; write the person's as ready-to-paste commands in order, and never run them yourself. Don't tell the next session to ask what it can check; write it as a check (for example "run `git branch --merged main`"). Where the files support a sensible call (a broken link whose text names an existing page), write it as an inferred default for the next session to act on, not a question for the person.
-- **Why:** what changed, what was decided and why, what was tried and dropped. Link to decision records rather than repeating them.
-- **What went wrong:** first line says whether the previous note was accurate, wrong about something, or missing. Then corrections, retries, redone work, what worked, and what cost more than it should (time, tokens, money). Count your own repeated or costly mistakes even if nobody caught them. "Nothing to note" is fine; an invented lesson is worse than none.
+- **Why:** what changed, what was decided and why, what was tried and dropped. Link to decision records rather than repeating them. A record still `proposed` goes in **Next** as one of the person's steps: approve or change its text.
+- **What went wrong:** first line says whether the previous note was accurate, wrong about something, or missing. Then corrections, retries, redone work, what worked, and what cost more than it should (time, tokens, money). Count your own repeated or costly mistakes even if nobody caught them. "Nothing to note" is fine; an invented lesson is worse than none. A lesson worth telling others also goes to the project's build log, if it keeps one.
 - Lessons use the fields in the template. Serious means it could lose data, spend money, mislead a decision or cross a privacy line; being quietly wrong counts. "Act now" means a week's wait would itself do harm: also tell the person directly.
 
 Rules: write for a stranger, with no labels only this session would know. Name people as they named themselves, give each one name and role throughout, and say who said or decided each thing; take roles from what people said, never from labels your tool puts on messages. Never copy personal details from the project's data (the names, emails or phone numbers of customers, volunteers and the like) into a note, even a private one; point to the record instead ("the 10:05 and 10:07 sign-ups"). Every path is relative to the project; no temp, session or home-folder paths. One topic per note. Length follows the session. Leave out personal and machine-wide to-dos. No second, shorter copy: one file, "Next" first.

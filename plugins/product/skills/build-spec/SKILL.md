@@ -2,7 +2,7 @@
 name: build-spec
 description: Readies work for a coding agent to build unattended (overnight, a /goal loop, a headless claude -p job) so the run finishes alone and fixes the real problem. Sizes the preparation, limits what the agent may touch, writes a spec whose finish line is a runnable command, and hands over a paste-ready start command. Later says whether a finished run actually fixed the problem. Use for requests like "the agent finished overnight, did it work?", "here's my spec, is it safe to leave running?" or "can Claude build the booking page while I sleep?". Not for deciding whether to build (use the PRD skill), schedules or loops, agent system design, code review, personal goals, decks, or small edits. Never starts the build.
 metadata:
-  version: "2.0"
+  version: "2.1"
 ---
 
 # Build spec
@@ -57,7 +57,7 @@ Once they've given enough, write all of it, marking your own picks `(assumed: ..
 
 ## Write the spec
 
-Fill in a copy of `references/spec-template.md` in the project; the ready check reads its headings, fields and columns, and its comments say what each part needs. A single-run spec past a few pages is usually a chain.
+Fill in a copy of `references/spec-template.md` in the project (in a repository, `docs/work/<topic>/`, beside its PRD, as the filing skill says); the ready check reads its headings, fields and columns, and its comments say what each part needs. A single-run spec past a few pages is usually a chain.
 
 - **For everyone:** a "done when" command a machine or outsider can run for a plain pass or fail; without it nothing is ready. Thin end-to-end pieces, each with a check a newcomer could judge. Seen failing means working code broken on purpose and the check catching it; red before the code exists doesn't count. Two to four real-world checks, one with a named person doing the real task on their own.
 - **For the agent:** facts as plain rules, not links ("store hours are Pacific time, not UTC"). Each rule names what enforces it; prose alone gets ignored.

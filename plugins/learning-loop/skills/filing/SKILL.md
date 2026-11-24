@@ -2,7 +2,7 @@
 name: filing
 description: Where a project's documents go and how they're named and kept, with templates. Use when creating, naming, moving, replacing or tidying any document in a project's docs/ folder (what's true now, a piece of work's PRD, spec or research, a decision record, a handover note), when starting a new project's docs, or when unsure where something belongs. Not for writing the content itself (PRDs, build specs and handover notes have their own skills) or for code comments and READMEs.
 metadata:
-  version: "3.0"
+  version: "4.0"
 ---
 
 # Filing
@@ -34,11 +34,23 @@ Instructions for agents stay in `AGENTS.md` at the repo root. Code comments and 
 | Build spec and its files | `docs/work/<topic>/` | A second build on the same topic gets a subfolder named by date and topic |
 | Research or images for that work | `docs/work/<topic>/` | Research that spans topics gets its own topic |
 | A smaller decision | The PRD or build spec it belongs to | |
-| A decision that's hard to reverse or affects many parts | `docs/decisions/<date-topic>.md` | Never edited. A new record replaces it |
+| A decision that's hard to reverse or affects many parts | `docs/decisions/<date-topic>.md` | See Decision records below |
 | What happened in a session | `docs/handovers/<date-topic>.md` | Never edited. A new handover replaces it |
 | A lesson | The handover's lessons section | Its fix goes in `AGENTS.md`, a skill, a hook, or `docs/current/` |
 
-State each thing once and link to it elsewhere. A decision record has four short parts: the problem, the decision, the options rejected and why, and what it makes easier or harder.
+State each thing once and link to it elsewhere.
+
+## Decision records
+
+Write one when a choice is hard to undo or changes a promise people rely on: what data leaves their machine, a safety rule, a licence, a public name. A choice only one piece of work cares about goes in that work's PRD or build spec instead.
+
+- Four short parts: the problem, the decision, the options turned down and why, and what it makes easier or harder. If it binds code, say how that's checked (a test, a lint, a review rule).
+- Write for someone a year from now who wasn't there: full sentences, plain words, and the real event or number behind the choice. Keep it to about one screen. Longer usually means it holds research, results or a plan: put those in `docs/work/<topic>/` and link them.
+- It starts as `proposed`. It becomes `active` only when the person who owns the decision approves the text itself, not just the idea; write who and when on the record. An agent never marks its own record active, and nothing built on it merges until then.
+- Old text is never rewritten. A narrow change or addition is an amendment added at the end, headed with its date and topic, with its own status and approval. A reversal, or what would be a fourth amendment, is a new record that replaces the old one.
+- Once there are more than five, keep `docs/decisions/README.md`: one line each with its status, updated in the same change.
+- Point `AGENTS.md` at the records agents must follow, by link, rather than restating them.
+- A project that already keeps records elsewhere (such as numbered files in `docs/adr/`) keeps that folder and its numbering; don't rename to match.
 
 ## Names
 
@@ -57,7 +69,7 @@ parent: docs/work/refunds/PRD.md
 ---
 ```
 
-- `status` is `draft`, `active`, `done` or `replaced`.
+- `status` is `draft`, `active`, `done` or `replaced`. A decision record can also be `proposed`, waiting for its owner's approval.
 - `parent` is the document this one came from, or `none`.
 
 When a document is finished or replaced, set its status, add a one-line link to whatever replaced it, and leave it where it is.
