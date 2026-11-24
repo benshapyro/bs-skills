@@ -45,6 +45,7 @@ State each thing once and link to it elsewhere.
 Write one when a choice is hard to undo or changes a promise people rely on: what data leaves their machine, a safety rule, a licence, a public name. A choice only one piece of work cares about goes in that work's PRD or build spec instead.
 
 - Four short parts: the problem, the decision, the options turned down and why, and what it makes easier or harder. If it binds code, say how that's checked (a test, a lint, a review rule).
+- Write for someone a year from now who wasn't there: full sentences, plain words, and the real event or number behind the choice. Keep it to about one screen. Longer usually means it holds research, results or a plan: put those in `docs/work/<topic>/` and link them.
 - It starts as `proposed`. It becomes `active` only when the person who owns the decision approves the text itself, not just the idea; write who and when on the record. An agent never marks its own record active, and nothing built on it merges until then.
 - Old text is never rewritten. A narrow change or addition is an amendment added at the end, headed with its date and topic, with its own status and approval. A reversal, or what would be a fourth amendment, is a new record that replaces the old one.
 - Once there are more than five, keep `docs/decisions/README.md`: one line each with its status, updated in the same change.

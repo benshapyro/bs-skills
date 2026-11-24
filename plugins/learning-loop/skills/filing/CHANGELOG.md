@@ -2,7 +2,7 @@
 
 ## 4.0 — 2026-11-23
 
-Decision records gain a `proposed` status that only the decision's owner moves to `active`, dated amendments added at the end (a reversal, or a fourth amendment, is a new record), an index once there are more than five, and a pointer from AGENTS.md; a project that already keeps records in a folder such as `docs/adr/` keeps it. The template starts at `proposed`, records who approved it, and shows an amendment. Why: a review of the Tycho project's 19 decision records found the owner's approval step and add-only amendments were what made them safe for AI agents to build on, and "never edited" was not how they were kept. On Ben's request (23 Nov 2026).
+Decision records gain a `proposed` status that only the decision's owner moves to `active`, dated amendments added at the end (a reversal, or a fourth amendment, is a new record), an index once there are more than five, and a pointer from AGENTS.md; a project that already keeps records in a folder such as `docs/adr/` keeps it. The template starts at `proposed`, records who approved it, and shows an amendment. Records are written for a reader a year later and kept to about one screen, with research and results linked rather than included (Tycho's longest records had grown to 150-175 lines by holding measurements and plans). Why: a review of the Tycho project's 19 decision records found the owner's approval step and add-only amendments were what made them safe for AI agents to build on, and "never edited" was not how they were kept. On Ben's request (23 Nov 2026).
 
 ## 3.0 — 2026-11-12
 
