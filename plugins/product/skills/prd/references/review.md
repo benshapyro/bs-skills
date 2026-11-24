@@ -50,4 +50,6 @@ Confirm that:
 - **Go:** the PRD becomes build-spec's input. Build-spec treats an untagged requirement as unconfirmed, so tags matter.
 - **Hold:** list each blocker by the ID it concerns and what clears it ("H2: name who counts no-shows"; "R2: Q1 answered, due 2026-11-20"). If someone outside must act, cite their Q item.
 
+- **Stop:** the evidence says not to build this, or not now: the worst risk has no response the owner can afford, or today's workaround beats it against S and H. Say so in the first line of the reply, with the R item and what would reopen the question.
+
 Write the verdict into the Status line. A Hold is advice: if the owner builds anyway, record that in the decision log and keep the blockers in the header.

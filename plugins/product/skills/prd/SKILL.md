@@ -2,7 +2,7 @@
 name: prd
 description: Helps a solo owner decide whether an idea is worth building and pin down exactly what it is, as a short, candid requirements document (PRD) that stays the reference for that piece of work. The core is risk - the owner names what could sink the idea (value, usability, feasibility, viability, harm), picks a response to each, and gets a cheap test this week for the worst - and every claim shows its source. Use when someone wants to write a PRD, has an app idea and wonders if it is worth the effort, pastes meeting notes or a repo and asks what the product should be, needs the requirements updated after plans changed, asks whether their PRD is good enough to hand off, or has a product manager take-home assignment. Not for slicing or scheduling the build, estimates, or preparing a coding agent (build-spec does that from the finished PRD), and not for a small, well-understood change, which is an ordinary task.
 metadata:
-  version: "2.0"
+  version: "3.0"
 ---
 
 # PRD
@@ -20,16 +20,28 @@ You help one person, often a non-developer working alone, decide whether an idea
 
 ## First reply
 
+Look before asking. Read what is within reach (the repository, shared files, any data or calendar you were given) and open with three to five facts you found, each with where it came from, for the owner to correct. Count what can be counted: how often it happens, how long it takes. Facts only; hold your view of the idea.
+
 No document yet: nothing can be drafted until the owner's view is on record and one piece is agreed. Ask for it before giving yours: in two or three lines, why build this, and what would most likely sink it? Keep it word for word; once risks are ranked, set your top one beside theirs and say where and why you differ.
 
 In a line, say what you will produce. Then ask what the two open decisions need, the harder one first:
 
-- **Which piece.** If the material mixes products or features, name them and propose the one carrying the costliest risk or that the others rely on, citing details you noticed.
+- **Which piece.** If the material mixes products or features, name them and propose the one carrying the costliest risk or that the others rely on, citing details you noticed. Cut it to the narrowest piece that still carries that risk and say what the cut leaves out; a narrow piece makes every later answer sharper.
 - **What size.** Who the real users are and whether any can be reached, and the size you propose, with why.
 
 Once a piece is agreed, scope it as **Builds** (this PRD), **Relies on** (neighbors it needs but does not specify) and **Excluded** (everything else, permanently).
 
-**Draft now?** If the owner asks, write the short version, status Draft, guesses at the top, most damaging first; the reply names the piece assumed and what was left out.
+**Draft now?** If the owner asks, write the short version, status Draft, guesses at the top, most damaging first; the reply names the piece assumed, what was left out and which interview rounds were skipped.
+
+## Interview
+
+No section is drafted until the owner has answered a round on each of these, one round a turn, a few questions each with your proposed answer so they can reply "yes to all but the second":
+
+1. **The problem:** the latest real time it happened, as under (owner) below.
+2. **The people:** who is affected, and which of them can be reached this week.
+3. **The limits:** what must not change, what it may cost to build and run, what is off the table.
+
+Look up what a round needs before asking it. Stop when a round changes nothing you would write. A question asked after the draft exists is a round that came too late.
 
 ## Drafting
 
@@ -62,7 +74,7 @@ Read `references/document.md` before writing. Show the document a section at a t
 
 ## Before calling it ready
 
-With every section drafted, follow `references/review.md` (independent reviewers, lint, a Go or Hold verdict); tell the owner only what needs their decision.
+With every section drafted, follow `references/review.md` (independent reviewers, lint, a Go, Hold or Stop verdict); tell the owner only what needs their decision.
 
 ## Revising
 
