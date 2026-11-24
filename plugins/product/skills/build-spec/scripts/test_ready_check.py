@@ -37,6 +37,10 @@ Task: exports October and sends it to the accountant
 Judge on: 2026-12-05
 ## Baseline
 `pytest` passed 212 on 2026-11-09.
+## Rules that must still hold
+| Rule today | Enforced where | New path it must cover | Test through the whole run |
+|---|---|---|---|
+| Voided invoices are never exported | export/filter.py | The new month export | `pytest -k month_skips_voided` |
 ## Facts to use
 - Amounts are in cents. [src: models/invoice.py]
 ## Agent rules
@@ -80,6 +84,11 @@ CASES = [(old, new, 1, msg) for old, new, msg in [
     ("Person: Dana, finance lead\n", "", "needs 'Person:'"),
     ("Judge on: 2026-12-05", "Judge on: later", "needs 'Person:'"),
     ("| deny rule |", "| |", "'Enforced by'"),
+    ("| Voided invoices are never exported | export/filter.py | The new month export | `pytest -k month_skips_voided` |\n",
+     "", "'## Rules that must still hold' is empty"),
+    ("## Rules that must still hold\n", "## Other\n", "no '## Rules that must still hold'"),
+    ("| `pytest -k month_skips_voided` |", "| |", "needs a test through the whole run"),
+    ("| The new month export |", "| |", "needs a test through the whole run"),
     ("2026-11-10: op read", "op read", "'Proven' needs a date"),
     ("| ops lead |", "| |", "fill every column"),
     ("claude -p ", "claude ", "headless"),
@@ -94,6 +103,9 @@ CASES = [(old, new, 1, msg) for old, new, msg in [
     ("- None", "- Which tax field? Finance lead, by 2026-11-11", 2, "still open"),
     ("2026-11-10: op read printed it", "not yet, by 2026-11-12", 2, "not proven yet"),
     ("# Spec", "# Spec", 0, "READY"),
+    ("| Rule today | Enforced where | New path it must cover | Test through the whole run |\n|---|---|---|---|\n"
+     "| Voided invoices are never exported | export/filter.py | The new month export | `pytest -k month_skips_voided` |\n",
+     "None found: searched export/ and tests/ for filters and guards on 2026-11-09.\n", 0, "READY"),
 ]
 
 

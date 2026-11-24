@@ -16,6 +16,8 @@ Work back from the goal: a row per real-world check (hands-on test included), th
 
 Result: pass, fail, later (date and judge; offer a reminder), or no evidence.
 
+Set the spec's pieces and requirements beside the diff: one neither built nor listed as not built in the pull request is a miss from the build. Each row under Rules that must still hold gets its test rerun.
+
 Then scan the log and diff for choices the spec never covered (a new library, a skipped edge case, a file outside scope); the person accepts or rejects each that matters.
 
 ## The answer

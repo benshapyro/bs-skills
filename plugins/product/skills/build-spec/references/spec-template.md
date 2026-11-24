@@ -38,6 +38,12 @@ Judge on: [[now or a date]]
 ## Baseline
 `[[existing test command]]` passed [[N]] on [[date]]; the same must pass at the end. Existing tests change only with [[person]]'s approval.
 
+## Rules that must still hold
+<!-- A row per check, guard or limit that works today and that this change could route around: a new way in, a new copy of the data, a new place the result is used. Look in the code before asking. The test runs the real sequence from input to result, not the guard alone; a guard can pass alone and still be skipped on the new path. Found none? Replace the table with "None found:" and what you searched. -->
+| Rule today | Enforced where | New path it must cover | Test through the whole run |
+|---|---|---|---|
+| [[what must never happen, in plain words]] | [[file or function]] | [[the new route the change adds]] | [[command and expected result]] |
+
 ## Facts to use
 - [[A fact as a plain rule]] [src: [[...]]]
 
@@ -45,6 +51,8 @@ Judge on: [[now or a date]]
 | Rule | Enforced by |
 |---|---|
 | Report a failing check and stop; never weaken it or touch existing tests. | [[baseline in Done when + review]] |
+| Write each piece's check before its code. It must still be seen failing against working code afterwards. | [[Seen failing on each piece + review]] |
+| A fix run: reproduce the fault and name its cause in the log before changing any code. | [[a failing test committed before the fix / prose only]] |
 | [[rule]] | [[deny rule / hook / test / prose only]] |
 
 ## Not in this run
@@ -78,5 +86,5 @@ claude -p --permission-mode auto --max-turns [[N]] --max-budget-usd [[USD]] --ou
 Read [[path to this file]] in full first. Done means its Done when command passes.
 Build the pieces in order on branch [[name]], committing each once its check passes.
 Run the baseline tests first and last. If [[cases where a person must step in]], stop and say why.
-At the end, open a pull request and stop." > run-log.jsonl
+At the end, open a pull request that lists every requirement in the spec that is not built, and stop." > run-log.jsonl
 ```
