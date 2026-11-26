@@ -11,7 +11,11 @@ repo="$(cd "${1:-.}" && git rev-parse --show-toplevel)"
 names="${2:-}"
 if [ -n "$names" ]; then
   names="$(cd "$(dirname "$names")" && pwd)/$(basename "$names")"
-  case "$names" in "$repo"/*) echo "The names file must live outside the repository." >&2; exit 1 ;; esac
+  case "$names" in "$repo"/*)
+    if ! git -C "$repo" check-ignore -q "$names"; then
+      echo "The names file must live outside the repository, or in a folder git ignores." >&2; exit 1
+    fi ;;
+  esac
 fi
 hooks_dir="$(cd "$repo" && cd "$(git rev-parse --git-common-dir)" && pwd)/hooks"
 hook="$hooks_dir/pre-commit"
