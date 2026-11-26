@@ -2,7 +2,7 @@
 name: filing
 description: Where a project's documents go and how they're named and kept, with templates. Use when creating, naming, moving, replacing or tidying any document in a project's docs/ folder (what's true now, a piece of work's PRD, spec or research, a decision record, a handover note), when starting a new project's docs, or when unsure where something belongs. Not for writing the content itself (PRDs, build specs and handover notes have their own skills) or for code comments and READMEs.
 metadata:
-  version: "4.0"
+  version: "4.1"
 ---
 
 # Filing
@@ -60,7 +60,7 @@ Write one when a choice is hard to undo or changes a promise people rely on: wha
 
 ## Top of each document
 
-Everything except `docs/current/` starts with two labels. In a build spec folder, only the main spec needs them.
+Everything except `docs/current/` and `docs/handovers/` starts with two labels. In a build spec folder, only the main spec needs them. A handover uses the handover skill's own header instead: it's never edited, so it has no status to change, and the note it replaces is named in its "Previous note" line.
 
 ```yaml
 ---

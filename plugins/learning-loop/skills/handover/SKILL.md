@@ -2,7 +2,7 @@
 name: handover
 description: Read and write session handover notes in a project's docs/handovers/ folder so the next session, in any AI tool, on any machine or by another person, starts straight away without re-explaining or redoing work. Use at the start of work in a project that has handover notes, or on "pick up where we left off", "what's the state of this", "continue from last time". Use at the end on "write the handover", "handover note", "wrap up", "we're done for today", "I'm stopping here", or when a hook reminds you; offer one if real work happened and the person is leaving. Use mid-session on "remember this for the handover" or when a lesson happens. Not for personal or machine-wide to-dos, meeting notes, changelogs, decision records, or a project's permanent docs.
 metadata:
-  version: "1.4"
+  version: "1.5"
 ---
 
 # Handover
@@ -11,7 +11,7 @@ A session ends and its memory goes with it. A handover is the one file that lets
 
 Notes live in `docs/handovers/` at the project root (create it if missing), one new file per note: `YYYY-MM-DD-topic.md`, adding `-HHMM` (then `-HHMMSS`) if the name is taken. Never overwrite or edit an old note; write a new one that replaces it. Template and example: `references/note-template.md`.
 
-Write one note per session, only when the person says they are stopping or asks for one. Finishing a step or a task is not the cue, and neither is their answer about how notes are saved: note that answer and keep working. If work carries on after the note, write one replacement at the new end.
+Write a note when the person says they are stopping or asks for one. A long thread that commits to the project also writes one when a piece of work is merged and the thread moves on to something else, and at the end of each day it runs past, so no stretch of work goes unrecorded. Finishing a step or a task is not the cue, and neither is their answer about how notes are saved: note that answer and keep working. If work carries on after a note, the next note replaces it; don't write one per step.
 
 ## Starting a session
 
