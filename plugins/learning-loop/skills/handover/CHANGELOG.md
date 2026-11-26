@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4 — 2026-11-25 19:43 PST
+
+A lesson's "Belongs in" line now lists a test or automatic check first, and the skill says to pick one whenever it could catch the mistake. A check stops a repeat every time; a written instruction works only when it is read and followed. From the five-toolset trial, where two of the other toolsets rank fixes this way. Approved by Ben (25 Nov 2026).
+
 ## 1.3 — 2026-11-23
 
 A decision record still waiting for approval is listed among the person's steps in Next, the example's decision link uses filing's date naming instead of a number, and a lesson worth telling others is also sent to the project's build log. On Ben's request (23 Nov 2026), alongside filing 4.0.
