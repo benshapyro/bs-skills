@@ -49,7 +49,7 @@ Previous note: <accurate / wrong about X / missing / none>
 - Applies when / doesn't apply when:
 - Caught by: <person / test / luck>
 - Severity: <low / medium / serious / act now>
-- Belongs in: <global instructions / a skill / a project file / an automatic block / unsure>
+- Belongs in: <a test or automatic check / an automatic block / a skill / a project file / global instructions / unsure>
 - Seen before: <relative link to earlier note, or none>
 ```
 
