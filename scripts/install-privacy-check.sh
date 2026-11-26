@@ -7,10 +7,10 @@
 # names to block; see privacy-check.sh.
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
-repo="$(cd "${1:-.}" && git rev-parse --show-toplevel)"
+repo="$(cd "$(cd "${1:-.}" && git rev-parse --show-toplevel)" && pwd -P)"
 names="${2:-}"
 if [ -n "$names" ]; then
-  names="$(cd "$(dirname "$names")" && pwd)/$(basename "$names")"
+  names="$(cd "$(dirname "$names")" && pwd -P)/$(basename "$names")"
   case "$names" in "$repo"/*)
     if ! git -C "$repo" check-ignore -q "$names"; then
       echo "The names file must live outside the repository, or in a folder git ignores." >&2; exit 1
