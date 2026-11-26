@@ -42,7 +42,7 @@ claude plugin validate plugins/product      # or any plugin folder
 cd plugins/learning-loop && claude plugin eval . --scaffold --allow-tools Bash Write Edit   # handover behaviour, about $1 a run
 ```
 
-`scripts/privacy-check.sh` blocks a commit that names a client (read from a clients folder; see the script) or includes a home-folder path. Turn it on for a repository with `scripts/install-privacy-check.sh <repo>`.
+`scripts/privacy-check.sh` blocks a commit that names a client (read from a clients folder; see the script), names anyone on a project's own names list (kept outside the repository), or includes a home-folder path. Turn it on for a repository, and all its worktrees, with `scripts/install-privacy-check.sh <repo> [names-file]`. Test it with `./tests/test_privacy_check.sh`.
 
 Each skill keeps its own `CHANGELOG.md` and a `version` in its header; raise the plugin's `version` too when a skill changes.
 

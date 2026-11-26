@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5 — 2026-11-25
+
+A long thread that commits to the project also writes a note when a piece of work is merged and the thread moves on, and at the end of each day it runs past, not only when the person stops. The weekly review of 2026-11-23 found one thread that went seven days and 73 pull requests without a note, and the rule that notes come only at the person's stop was the cause. Still no note per step. Approved by Ben (25 Nov 2026).
+
 ## 1.4 — 2026-11-25 19:43 PST
 
 A lesson's "Belongs in" line now lists a test or automatic check first, and the skill says to pick one whenever it could catch the mistake. A check stops a repeat every time; a written instruction works only when it is read and followed. From the five-toolset trial, where two of the other toolsets rank fixes this way. Approved by Ben (25 Nov 2026).
